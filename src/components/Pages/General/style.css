@@ -1,0 +1,73 @@
+#filterActions {
+    left: 5vw;
+    top: 40vh;
+}
+.filterActions .list-actions-item:hover {
+    /* transform: translate3d(0px,0px,0px); */
+    /* font-weight: 600; */
+    color: black;
+}
+.loading-icon.active {
+    /* transform: rotate(360deg); */
+    /* transition: rotate 1s cubic-bezier(0.215, 0.61, 0.355, 1); */
+    color: grey;
+    /* font-weight: bold; */
+    /* font-size: 1rem; */
+}
+.loading-icon.inactive {
+    /* transform: rotate(0deg); */
+    /* transition: rotate 1s cubic-bezier(0.215, 0.61, 0.355, 1); */
+    /* color: orange; */
+    /* font-weight: bold; */
+    /* font-size: 1rem; */
+}
+section#ActionButtons .active {
+    font-weight: bold;
+}
+.position-filled-label {
+    top: -2px;
+    right: -3px;
+}
+.crew-position-item:hover > div > div {
+    box-shadow: 0px 0px 7px 0px #0000001f;
+}
+.mh-400 {
+
+    max-height: 400px;
+}
+.ant-drawer-wrapper-body {
+    height: 100%;
+}
+.bp3-heading {
+    color: #828282;
+    font-weight: 500;
+    margin: 0 0 10px;
+    padding: 0;
+    font-size: 0.9rem !important;
+}
+
+.bg-green {
+    background: #c6c25f !important;
+  }
+  .green {
+    color: #c6c25f !important;
+  }
+
+
+
+#ToolbarButtons button:active {
+    /* transform: scale3d(0.96,0.96,1); */
+    /* zoom: 0.9; */
+    /* zoom: 1.1; */
+    background: #4c4c4c !important;
+}
+#ToolbarButtons button:active > div > span {
+    /* transform: scale3d(0.96,0.96,1); */
+    /* zoom: 0.9; */
+    /* zoom: 1.1; */
+    color: white;
+}
+
+#ToolbarButtons button:hover {
+    background: #545454;
+}

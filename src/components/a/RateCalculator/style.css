@@ -1,0 +1,10 @@
+/* No CSS *//*# sourceMappingURL=Files.css.map */
+.width5 {
+width: 200px;
+}
+.width3 {
+width: 60px;
+}
+.hover-lighten-10:hover {
+    opacity: 0.9;
+}

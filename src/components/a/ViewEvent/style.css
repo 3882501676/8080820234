@@ -1,0 +1,43 @@
+/* #OnboardingScreen {
+    z-index: 9;
+}
+.round {
+    border-radius: 250px;
+    overflow: hidden;
+}
+.button-account:hover {
+    background: #eae7e7;
+}
+#OnboardingScreen .ant-steps-icon {
+    padding: 0;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-weight: 700;
+} 
+
+#OnboardingScreen .ant-steps-item-finish .ant-steps-item-icon {
+    background-color: #fff;
+    border-color: transparent !important;
+}
+#OnboardingScreen span.ant-steps-icon {
+    font-size: 0.7rem !important;
+}
+#OnboardingScreen .ant-steps-item-wait .ant-steps-item-icon {
+    background-color: #fff;
+    border-color: transparent;
+}
+.bp3-dialog {
+    padding: 0 !important;
+    overflow: hidden;
+}
+button {
+    border: none;
+}
+.top-10vh {
+    top: 10vh;
+} */

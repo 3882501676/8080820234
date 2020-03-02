@@ -1,0 +1,67 @@
+{
+  "name": "crew20-web",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "@auth0/auth0-spa-js": "^1.2.0",
+    "@blueprintjs/core": "^3.19.1",
+    "@blueprintjs/datetime": "^3.14.0",
+    "@imaginiq/ui": "file:src/utils/ui",
+    "antd": "^3.20.5",
+    "antd-mobile": "^2.3.1",
+    "filepond": "^4.7.4",
+    "filepond-plugin-file-rename": "^1.1.4",
+    "filepond-plugin-image-exif-orientation": "^1.0.6",
+    "filepond-plugin-image-preview": "^4.5.0",
+    "framer": "^1.1.6",
+    "framer-motion": "^1.7.0",
+    "geopattern": "^1.2.3",
+    "imaginiq-util": "file:src/utils/util",
+    "moment": "^2.24.0",
+    "moment-range": "^4.0.2",
+    "moment-timezone": "^0.5.27",
+    "node-sass": "^4.13.0",
+    "query-string": "^6.9.0",
+    "react": "16.8.6",
+    "react-app-polyfill": "^1.0.5",
+    "react-big-calendar": "^0.23.0",
+    "react-dom": "16.8.6",
+    "react-filepond": "^7.0.1",
+    "react-helmet": "^5.2.1",
+    "react-image-lightbox": "^5.1.1",
+    "react-intersection-observer": "^8.25.2",
+    "react-linkify": "^1.0.0-alpha",
+    "react-pose": "^4.0.8",
+    "react-router": "5.0.1",
+    "react-router-dom": "5.0.1",
+    "reactn": "^2.2.4",
+    "reactstrap": "^8.0.1",
+    "socket.io-client": "^2.3.0",
+    "styled-components": "^4.3.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "commit": "git add . && git commit -m 'Update' && git push -u origin master",
+    "deploynow": "now ./build --name crew20 --prod",
+    "deployprod": "aws s3 sync ./build s3://crew20-app-prod",
+    "deploystaging": "aws s3 sync ./build s3://crew20-app-staging"
+  },
+  "devDependencies": {
+    "react-scripts": "^3.1.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

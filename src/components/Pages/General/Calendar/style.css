@@ -1,0 +1,26 @@
+.rbc-event {
+  border: none;
+  box-sizing: border-box;
+  box-shadow: none;
+  margin: 0;
+  padding: 10px 20px;
+  background-color: #3ce067;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+.rbc-addons-dnd .rbc-addons-dnd-resizable {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.rbc-event-content {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.vh84 {
+    height: 84vh;
+}

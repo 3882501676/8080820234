@@ -1,0 +1,14 @@
+.col-7 > div {
+    width: calc(100% / 7)
+}
+
+@media only screen and (min-width: 768px) {
+.col-3 > div {
+    width: calc( calc(100% / 3) - 1vw )
+}
+}
+@media only screen and (max-width: 768px) {
+    .col-3 > div {
+        width: 100%
+    }
+    }

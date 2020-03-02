@@ -1,0 +1,344 @@
+/* @import "react-big-calendar/lib/sass/styles"; */
+/* @import "react-big-calendar/lib/addons/dragAndDrop/styles"; // if using DnD */
+/* import "@blueprintjs/core/lib/css/blueprint.css" */
+
+@import "./responsive.css";
+@import "./calendar.css";
+@import "https://unpkg.com/@blueprintjs/datetime@2.0.3/lib/css/blueprint-datetime.css";
+
+.blur {
+  filter: blur(4px) grayscale(1)
+}
+
+.image-preview-wrapper {
+  max-width: 30rem;
+  max-height: 25rem;
+}
+.w-auto {
+  width: auto;
+}
+.h-auto {
+  height: auto;
+}
+.vh12 {
+  min-height: 12vh;
+}
+.vh10 {
+  min-height: 10vh;
+}
+.vw100 {
+  width: 100vw;
+}
+.h96vh {
+  height: 96vh;
+}
+.top12vh {
+  top: 12vh;
+}
+.am-search {
+  width: 100% !important;
+  margin: 0 !important;
+  width: 100% !important;
+  margin: 0 !important;
+  position: absolute !important;
+  bottom: 7vh !important;
+}
+/* 
+.rbc-row-content {
+  pointer-events: none !important;
+}
+.rbc-day-bg:hover {
+  background: grey;
+}
+.rbc-day-bg {
+  cursor: pointer !important;
+}
+.rbc-date-cell a {
+  font-size: 2rem !important;
+  padding: 0.6rem !important;
+  height: 24px;
+  max-height: 0;
+  font-weight: 100 !important;
+  font-family: "Roboto";
+  color: #b9b9b9 !important;
+  top: 5px !important;
+  position: relative !important;
+}
+.rbc-row-segment {
+  padding: 0 10px 5px 10px !important;
+}
+.rbc-month-row {
+  background: white !important;
+}
+
+.rbc-addons-dnd .rbc-addons-dnd-row-body {
+  top: 2vh !important;
+}
+.rbc-event {
+  border: none;
+  margin: 0px;
+  padding: 3px 20px !important;
+  border-radius: 30px !important;
+  -webkit-border-radius: 30px !important;
+  -moz-border-radius: 30px !important;
+  -ms-border-radius: 30px !important;
+  -o-border-radius: 30px !important;
+}
+.rbc-header {
+  padding: 14px 1px !important;
+  font-weight: 500 !important;
+  font-size: 1.1rem !important;
+  border-bottom: 0px solid #ddd !important;
+  font-family: "Roboto" !important;
+  background: #c4c4c7 !important;
+  color: white !important;
+}
+.rbc-day-bg + .rbc-day-bg {
+  border-left: 1px solid #f5f5f9 !important;
+}
+.rbc-header + .rbc-header {
+  border-left: 0px solid #ddd !important;
+}
+.rbc-month-row + .rbc-month-row {
+  border-top: 1px solid #f5f5f9 !important;
+}
+.rbc-month-view {
+  border: 0px solid #ddd !important;
+}
+.rbc-month-view {
+  border: 0px solid #ddd !important;
+  border-radius: 1vw !important;
+  overflow: hidden !important;
+}
+
+.rbc-toolbar {
+  margin-bottom: 6vh !important;
+}
+span.rbc-toolbar-label {
+  font-size: 1.4rem !important;
+  font-family: "Roboto", sans-serif !important;
+  font-weight: 400 !important;
+  color: #9a9a9a !important;
+}
+
+span.rbc-btn-group {
+  border: none;
+  box-shadow: none;
+  background: #c4c4c766;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+span.rbc-btn-group > button {
+  border: none;
+  box-shadow: none;
+  padding: 0.6rem 2rem;
+  color: white;
+  font-weight: 400 !important;
+  font-family: "Roboto";
+}
+.rbc-toolbar button:hover {
+  color: #ffffff;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+  font-weight: 600 !important;
+} */
+.column-reverse {
+  flex-direction: column-reverse;
+}
+.bottom-10vh {
+  bottom: 9vh;
+}
+.bottom-7vh {
+  bottom: 7vh;
+}
+.top-6vh {
+  top: 6vh;
+}
+.mh-90vh {
+  max-height: 90vh;
+  overflow: scroll;
+  height: 90vh;
+}
+.mh-74vh {
+  max-height: 74vh;
+  height: 74vh;
+}
+select {
+  -webkit-appearance: none !important;
+}
+body {
+  background: #f7f7f7;
+}
+.ts-a {
+  text-shadow: 0px 3px 0px #00000033;
+}
+
+.f8 {
+  font-size: 0.6rem;
+}
+.avatar-m {
+  width: 100px;
+  height: 100px;
+}
+.avatar-s {
+  width: 30px;
+  height: 30px;
+}
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+}
+.avatar-l {
+  width: 100%;
+  height: 37vh;
+  border-radius: 0px;
+}
+
+.logo-img {
+  width: 50px;
+  height: 45px;
+  background-size: 100%;
+  background-position: 0px 2px;
+}
+.cursor-poiner {
+  cursor: pointer;
+}
+.tracked-03 {
+  letter-spacing: 0.25em;
+}
+.br5 {
+  border-radius: 5rem;
+}
+.tracked {
+  letter-spacing: 0.4em;
+}
+.mw100 {
+  max-width: 100%;
+}
+
+.bg-center {
+  background-position: center !important;
+}
+.bg-cover {
+  background-size: cover !important;
+}
+/* .bs-a {
+  box-shadow: 0px 0px 0px -1px #dedede69, 0px 2px 0px -4px #dedede;
+} */
+.bs-a {
+    box-shadow: 0px 0px 0px 6px #dedede69, 0px 0px 0px 0px #dedede;
+}
+.dark .bs-a {
+  box-shadow: 0px 0px 30px -1px #00000047, 0px 2px 20px -4px #00000087;
+  /* box-shadow: 0px 0px 30px -1px #000000d1, 0px 2px 20px -4px #000000; */
+}
+.bg-black-02 {
+  background: rgba(0, 0, 0, 0.02);
+}
+/* .count-badge {
+  margin-left: 1rem;
+  height: auto;
+  width: auto;
+
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+} */
+/* .count-badge span {
+  font-weight: bold;
+  padding: 0.1rem 0.4rem 0rem 0.4rem;
+  font-size: 0.7rem;
+  border-radius: 100px;
+} */
+.dark .count-badge span {
+  color: #0e0e0e;
+}
+.light .count-badge span {
+  color: #0e0e0e;
+}
+.z-999 {
+  z-index: 999;
+}
+.z-1001 {
+  z-index: 1001 !important;
+}
+.z-99 {
+  z-index: 99;
+}
+.z-1000 {
+  z-index: 1000;
+}
+.z-0 {
+  z-index: 0;
+}
+.pv2-5 {
+  padding-bottom: 0.7rem;
+  padding-top: 0.7rem;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+a {
+  color: initial;
+}
+button[disabled] {
+  /* background: #c5c5c5; */
+  filter: grayscale(1);
+  cursor: no-drop;
+}
+.round {
+  border-radius: 100px;
+}
+
+.row-reverse {
+  flex-direction: row-reverse;
+}
+.bp3-dialog-header {
+  background: #ebf1f5 !important;
+}
+/* @media only screen and (min-width: 768px) {
+  .list > div {
+    flex-basis: calc(calc(100% / 3) - 20px);
+  }
+  .col-2 > a,
+  .col-2 > div {
+    flex-basis: calc(calc(100% / 2) - 1vw);
+    width: calc(calc(100% / 2) - 1vw);
+  }
+  .col-3 > div {
+    flex-basis: calc(calc(100% / 3) - 1vw);
+    width: calc(calc(100% / 3) - 1vw);
+  }
+  .col-4 > div {
+    flex-basis: calc(calc(100% / 4) - 1vw);
+    width: calc(calc(100% / 4) - 1vw);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .list > div {
+    flex-basis: 100%;
+  }
+  .col-2 > a,
+  .col-2 > div {
+    flex-basis: calc(100% / 1);
+    width: calc(100% / 1);
+  }
+  .col-3 > div {
+    flex-basis: calc(calc(100% / 1));
+    width: calc(calc(100% / 1));
+  }
+  .col-4 > div {
+    flex-basis: calc(calc(100%));
+    width: calc(calc(100%));
+  }
+} */
+
+.invite-button:hover {
+  background: #00000005;
+  color: black;
+}
+

@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700|Roboto:100,200,300,500,400,600,700|Varela+Round&display=swap");
+
+[class^="icofont-"],
+[class*=" icofont-"] {
+  font-family: "IcoFont" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  line-height: 1;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}
+
+.digital {
+  font-family: "DS-Digital",sans-serif;
+}
+
+.varela {
+  font-family: "Varela Round", sans-serif;
+}
+.roboto {
+  font-family: "Roboto", sans-serif;
+}
+.exo {
+  font-family: "Exo 2", sans-serif;
+}
+.raleway {
+  font-family: 'Raleway', sans-serif;
+}

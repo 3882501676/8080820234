@@ -1,0 +1,167 @@
+[ 
+  { 
+     "code":"CAD",
+     "symbol":"$",
+     "name":"Canadian dollar"
+  },
+  { 
+     "code":"HKD",
+     "symbol":"HK$",
+     "name":"Hong Kong dollar"
+  },
+  { 
+     "code":"ISK",
+     "symbol":"kr",
+     "name":"Icelandic króna"
+  },
+  { 
+     "code":"PHP",
+     "symbol":"₱",
+     "name":"Philippine peso"
+  },
+  { 
+     "code":"DKK",
+     "symbol":"Kr",
+     "name":"Danish krone"
+  },
+  { 
+     "code":"HUF",
+     "symbol":"Ft",
+     "name":"Hungarian forint"
+  },
+  { 
+     "code":"CZK",
+     "symbol":"Kč",
+     "name":"Czech koruna"
+  },
+  { 
+     "code":"GBP",
+     "symbol":"£",
+     "name":"British pound"
+  },
+  { 
+     "code":"RON",
+     "symbol":"L",
+     "name":"Romanian leu"
+  },
+  { 
+     "code":"SEK",
+     "symbol":"kr",
+     "name":"Swedish krona"
+  },
+  { 
+     "code":"IDR",
+     "symbol":"Rp",
+     "name":"Indonesian rupiah"
+  },
+  { 
+     "code":"INR",
+     "symbol":"₹",
+     "name":"Indian rupee"
+  },
+  { 
+     "code":"BRL",
+     "symbol":"R$",
+     "name":"Brazilian real"
+  },
+  { 
+     "code":"RUB",
+     "symbol":"R",
+     "name":"Russian ruble"
+  },
+  { 
+     "code":"HRK",
+     "symbol":"kn",
+     "name":"Croatian kuna"
+  },
+  { 
+     "code":"JPY",
+     "symbol":"¥",
+     "name":"Japanese yen"
+  },
+  { 
+     "code":"THB",
+     "symbol":"฿",
+     "name":"Thai baht"
+  },
+  { 
+     "code":"CHF",
+     "symbol":"Fr.",
+     "name":"Swiss franc"
+  },
+  { 
+     "code":"EUR",
+     "symbol":"€",
+     "name":"European Euro"
+  },
+  { 
+     "code":"MYR",
+     "symbol":"RM",
+     "name":"Malaysian ringgit"
+  },
+  { 
+     "code":"BGN",
+     "symbol":"BGN",
+     "name":"Bulgarian lev"
+  },
+  { 
+     "code":"TRY",
+     "symbol":"TRY",
+     "name":"Turkish new lira"
+  },
+  { 
+     "code":"CNY",
+     "symbol":"¥",
+     "name":"Chinese/Yuan renminbi"
+  },
+  { 
+     "code":"NOK",
+     "symbol":"kr",
+     "name":"Norwegian krone"
+  },
+  { 
+     "code":"NZD",
+     "symbol":"NZ$",
+     "name":"New Zealand dollar"
+  },
+  { 
+     "code":"ZAR",
+     "symbol":"R",
+     "name":"South African rand"
+  },
+  { 
+     "code":"USD",
+     "symbol":"US$",
+     "name":"United States dollar"
+  },
+  { 
+     "code":"MXN",
+     "symbol":"$",
+     "name":"Mexican peso"
+  },
+  { 
+     "code":"SGD",
+     "symbol":"S$",
+     "name":"Singapore dollar"
+  },
+  { 
+     "code":"AUD",
+     "symbol":"$",
+     "name":"Australian dollar"
+  },
+  { 
+     "code":"ILS",
+     "symbol":"₪",
+     "name":"Israeli new sheqel"
+  },
+  { 
+     "code":"KRW",
+     "symbol":"W",
+     "name":"South Korean won"
+  },
+  { 
+     "code":"PLN",
+     "symbol":"zł",
+     "name":"Polish zloty"
+  }
+]

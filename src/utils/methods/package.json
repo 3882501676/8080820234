@@ -1,0 +1,14 @@
+{
+  "name": "@imaginiq/methods",
+  "version": "1.0.0",
+  "description": "ui methods / functions",
+  "license": "MIT",
+  "repository": "imaginiq/methods",
+  "main": "index.js",
+  "keywords": [
+    "tiny",
+    "npm",
+    "package",
+    "imaginiq"
+  ]
+}

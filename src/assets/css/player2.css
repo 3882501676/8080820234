@@ -1,0 +1,95 @@
+.video-react-control-bar {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+}
+.video-react .video-react-big-play-button {
+  display: none !important;
+}
+.video-react .video-react-control:before {
+    font-size: 4em !important;
+    line-height: 1.6em !important;
+}
+.video-react .video-react-play-control {
+    cursor: pointer;
+    /* flex: none; */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 10vh !important;
+    width: 10vw !important;
+}
+.video-react-control-bar.video-react-control-bar-auto-hide {
+    height: 10vh !important;
+    /* position: relative !important; */
+    display: flex !important;
+}
+  .video-react .video-react-control-bar {
+    display: flex !important;
+  }
+.video-react .video-react-progress-control {
+
+}
+/* .video-react-controls-enabled.video-react-has-started {
+  height:
+} */
+.video-react {
+    padding: 0 !important;
+}
+.video-react-control-bar {
+    background: #171717 !important;
+}
+.video-react-fullscreen .video-react.active.video video {
+    height: 100% !important;
+  }
+.video-react.active.video {
+    height: 70vh;
+    padding: 0 !important;
+}
+.video-react.active.video video {
+    height: 60vh;
+    padding: 0 !important;
+}
+.video-react-video {
+    height: 60vh !important;
+}
+
+.video-react.active.audio {
+    height: 10vh;
+    padding: 0 !important;
+}
+.video-react .video-react-control {
+  width: 10vw !important;
+}
+.video-react .video-react-control:focus:before, .video-react .video-react-control:hover:before, .video-react .video-react-control:focus {
+text-shadow: none !important;
+color: var(--c_9);
+}
+.video-react-play-progress.video-react-slider-bar, .video-react .video-react-play-progress {
+    background: var(--c_9);
+}
+.video-react .video-react-slider:focus {
+  box-shadow: none !important;
+  background: var(--c_9);
+}
+span.video-react-control-text {
+    color: var(--c_9);
+}
+.video-react .video-react-progress-control:hover .video-react-progress-holder {
+  font-size: inherit !important;
+}
+.video-react-time-control {
+    display: none !important;
+}
+.hide-player {
+  top: -6vh;
+
+}
+.hide-player-button {
+  background: #1f1f1f;
+width: 100px;
+right: 0;
+height: 6vh;
+border-top-left-radius: 1rem;
+}

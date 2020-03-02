@@ -1,0 +1,476 @@
+import React, { Component } from "react";
+// import SVG from 'react-inlinesvg';
+// import bases from 'bases';
+// window.bases = bases;
+// react-scrollbars-custom
+// import Scrollbar from 'react-scrollbars-custom';
+import { MDBContainer, MDBScrollbar, MDBSmoothScroll } from "mdbreact";
+import MaterialIcon, { colorPalette } from "material-icons-react";
+var interval_;
+var interval_2;
+var interval_3;
+const rows = [
+  {
+    type: "audio",
+    length: 15,
+    events: ["cvkSGgVp8dcAnNfN"],
+    eventsData: []
+  },
+  {
+    type: "graphic",
+    length: 10,
+    events: [],
+    eventsData: []
+  },
+  {
+    type: "scene",
+    length: 30,
+    events: [],
+    eventsData: []
+  },
+  {
+    type: "note",
+    length: 5,
+    events: ["nYpxyPNf72niZKpK"],
+    eventsData: []
+  },
+  {
+    type: "code",
+    length: 45,
+    events: [],
+    eventsData: []
+  }
+];
+class Sequencer_ extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      rows: rows,
+      rows_: [],
+      referenceArray: [],
+      activeNode: 0,
+      seconds: "00",
+      milliseconds: 0,
+      ms: "00",
+      ms_cursor: 0,
+      events: [],
+      isPlaying: false,
+      isPaused: false,
+      timecodeLength: 60,
+      zoom: 40,
+      mouseX: 0
+    };
+    // this.function = this.function.bind(this);
+    this.generateRows = this.generateRows.bind(this);
+    this.generateNodes = this.generateNodes.bind(this);
+    this.runSequencer = this.runSequencer.bind(this);
+    this.createReferenceArray = this.createReferenceArray.bind(this);
+
+    this.play = this.play.bind(this);
+    this.pause = this.pause.bind(this);
+    this.stop = this.stop.bind(this);
+    this.rewind = this.rewind.bind(this);
+
+    this.interval = this.interval.bind(this);
+    this.stopInterval = this.stopInterval.bind(this);
+
+    this.fetchEvents = this.fetchEvents.bind(this);
+    this.triggerEvent = this.triggerEvent.bind(this);
+
+    this.showDrawer = this.showDrawer.bind(this);
+
+    this.setTime = this.setTime.bind(this);
+    this.trackMouseCursor = this.trackMouseCursor.bind(this);
+  }
+  generateRows() {
+    this.setState({
+      rows: rows
+    });
+  }
+  generateNodes(item) {
+    const nodes = [];
+    let N = this.state.timecodeLength;
+    console.log(item);
+
+    for (var i = 1; i <= N; i++) {
+      let obj = {
+        index: i,
+        type: item.type,
+        eventsData:
+          i - 1 ===
+          (item.eventsData &&
+            item.eventsData[0] &&
+            item.eventsData[0].time / 1000)
+            ? item.eventsData
+            : null
+      };
+
+      nodes.push(obj);
+    }
+    item.nodes = nodes;
+    this.setState({
+      referenceArray: nodes
+    });
+    return item;
+  }
+  createReferenceArray(time) {
+    let self = this;
+    const nodes = [];
+    let N = time;
+
+    for (var i = 1; i <= N; i++) {
+      let obj = {
+        index: i
+      };
+      nodes.push(obj);
+    }
+    // console.log('ref array node/s',nodes)
+    setTimeout(() => {
+      self.setState({
+        referenceArray: nodes
+      });
+    }, 0);
+  }
+  interval(interval) {
+    let activeArray = [];
+    let n = parseInt(this.state.activeNode);
+    interval_ = setInterval(() => {
+      let n_ = ++n;
+      activeArray.push(n_);
+      let seconds = ("0" + n_).slice(-2);
+      this.setState({
+        activeNode: parseInt(n_),
+        seconds: seconds
+      });
+    }, 1000);
+
+    let m = parseInt(this.state.activeNode);
+    interval_3 = setInterval(() => {
+      let m_ = ++m;
+      // activeArray.push(n_);
+      let seconds = m_;
+      this.setState({
+        ms_cursor: seconds
+      });
+    }, 10);
+
+    let milliseconds = parseInt(this.state.milliseconds);
+    interval_2 = setInterval(() => {
+      let milliseconds_ = ++milliseconds;
+      let ms = milliseconds_.toString().substr(-2);
+      let milli = parseInt(milliseconds_.toString().substr(-2));
+      this.setState({
+        milliseconds: milli,
+        ms: ms
+      });
+    }, 10);
+
+    setTimeout(() => {
+      clearInterval(interval_);
+      this.setState({
+        activeNode: 0
+      });
+    }, interval);
+
+    // console.log("interval ", interval);
+  }
+  stopInterval(interval) {
+    this.stop();
+  }
+  runSequencer() {
+    console.log(this.state);
+    let self = this;
+    let time = 60; // 60 seconds
+    let interval = time * 1000;
+    this.interval(interval);
+  }
+  play() {
+    this.runSequencer();
+    this.setState({ isPlaying: true, isPaused: false });
+  }
+  pause() {
+    clearInterval(interval_);
+    clearInterval(interval_2);
+    clearInterval(interval_3);
+    this.setState({ isPlaying: false, isPaused: true });
+    // console.log(this.state);
+  }
+  stop() {
+    clearInterval(interval_);
+    clearInterval(interval_2);
+    clearInterval(interval_3);
+    // console.log(this.state);
+    this.rewind();
+    this.setState({ isPlaying: false, isPaused: false });
+  }
+  rewind() {
+    this.setState({
+      activeNode: 0,
+      milliseconds: 0,
+      seconds: "00",
+      ms: "00",
+      ms_cursor: 0
+    });
+  }
+  fetchEvents() {
+    let self = this;
+    // console.log('State', this.state.rows)
+    // console.log('Rows : ',this.state.rows)
+    // let rows = this.state.rows;
+    let eventsData = [];
+    for (let item of this.state.rows) {
+      // let events = item.events;
+      // console.log('Event :', item.events);
+      let events_ = item.events;
+      for (let event_ of events_) {
+        // console.log(event_)
+        window.db.events.find({ _id: event_ }, (err, res) => {
+          let data = res[0];
+          // console.log('Event data : ', data);
+          let events__ = this.state.rows;
+          for (let item of events__) {
+            if (item.type === data.type) {
+              item.eventsData.push(data);
+            }
+          }
+          // console.log('Modified events: ',events__)
+        });
+      }
+      // events_.push(events);
+    }
+  }
+  triggerEvent(event) {
+    console.log("triggered event : ", event);
+    // alert('event')
+  }
+  showDrawer(item) {
+    console.log(this.props);
+    this.props.showDrawer(item);
+  }
+  setTime(data) {
+    console.log(data);
+    let i = data.index;
+    this.setState({
+      activeNode: i,
+      seconds: i < 10 ? "0" + i : i,
+      ms: "00",
+      ms_cursor: i * this.state.zoom
+    });
+  }
+  trackMouseCursor() {
+    document.addEventListener("mousemove", evt => {
+      // let x = evt.clientX / window.innerWidth * (this.state.zoom*);
+      // let y = evt.clientY / innerHeight;
+      // let x = (evt.clientX/(window.innerWidth-100))*1000;
+      let x = evt.clientX;
+      this.setState({
+        mouseX: x
+      });
+      // console.log(x);
+    });
+  }
+  componentDidMount() {
+    // this.generateRows(this.state.rows);
+    this.fetchEvents();
+    setTimeout(() => {
+      let rows = this.state.rows;
+      let rows_ = [];
+
+      for (let item of rows) {
+        let nodes_ = this.generateNodes(item);
+        // item.nodes_ = nodes_;
+        rows_.push(item);
+      }
+
+      this.setState({
+        rows_: rows_
+      });
+    }, 1000);
+    setTimeout(() => {
+      // console.log("State ", this.state);
+    }, 1000);
+    // this.trackMouseCursor();
+  }
+  render() {
+    let zoom = this.state.zoom;
+    return (
+      <div className="flex flex-column w-100 h-100">
+        <section
+          id="SequencerControl"
+          className="h3 flex flex-row flex-auto w-100 bg-black-90"
+        >
+          <section id="Controls" className="flex flex-row  pa3">
+            <div
+              className={
+                this.state.isPlaying
+                  ? "active flex flex-column media-button pr3 cyan -white"
+                  : "flex flex-column media-button pr3 cyan -white"
+              }
+            >
+              <MaterialIcon onClick={this.play} icon="play_arrow" size={36} />
+            </div>
+            <div
+              className={
+                this.state.isPaused
+                  ? "active flex flex-column media-button pr3 cyan -white"
+                  : "flex flex-column media-button pr3 cyan -white"
+              }
+            >
+              <MaterialIcon onClick={this.pause} icon="pause" size={36} />
+            </div>
+            <div className="flex flex-column media-button pr3 cyan -white">
+              <MaterialIcon onClick={this.stop} icon="stop" size={36} />
+            </div>
+          </section>
+          <section
+            id="timeDisplay"
+            className="flex flex-row items-center justify-center raleway bl br b--black pa3 w5 f3"
+          >
+            <div className="flex flex-column media-button pr2 black">
+              <span id="timer" className="flex flex-column fw7 tracked">
+                {this.state.seconds}
+              </span>
+            </div>
+            <div className="flex flex-column media-button black-40 w4-">
+              <span className="flex flex-column fw1 tracked">
+                : {this.state.ms}
+              </span>
+            </div>
+          </section>
+        </section>
+        <section
+          id="Timeline"
+          className="flex flex-row w-100- h1 bt bb b--black overflow-"
+        >
+          <MDBContainer>
+            <section
+              id="Sequencer_"
+              className="scrollbar scrollbar-dark flex flex-column flex-auto w-100- bg-black-90- -mw100"
+            >
+              <section
+                id="timeline-spacer"
+                className="flex flex-column w-10- bg-black-90- br b--black"
+              >
+                <section
+                  id="trackerContainer"
+                  className="flex flex-row w-90- bg-black-90-"
+                  style={{
+                    width: "calc(" + zoom + "px * 60)",
+                    height: "(calc(" + rows.length + "* 80))"
+                  }}
+                >
+                  {this.state.referenceArray.map((item, index) => (
+                    // console.log(Number.isInteger((index*(25/100)))),
+                    <div
+                      onClick={() => this.setTime({ item, index })}
+                      key={index}
+                      className=" flex flex-column h-100 br b--black-20 items-start w2- -bg-black-90"
+                      style={{ width: zoom + "px" }}
+                    >
+                      <div className="flex items-start">
+                        {Number.isInteger(index * (25 / 100)) ? (
+                          <div className="time-marker flex">
+                            <span className="indicator-number">{index}</span>
+                          </div>
+                        ) : null}
+                      </div>
+                    </div>
+                  ))}
+                </section>
+                <div
+                  style={{
+                    transform: "translate3d(" + this.state.mouseX + "px,0,0)"
+                  }}
+                  className="mouseTracker absolute bg-blue"
+                />
+              </section>
+              <section id="SeqWrapper" class="flex flex-row">
+                <section id="SeqHeader" className="flex flex-column w-10-">
+                  {rows.map((item, index) => (
+                    <div
+                      key={index}
+                      className={
+                        item.type +
+                        " track track-header h4 w-100 flex flex-auto- flex-row bb br b--black-20 bg-black-20 relative"
+                      }
+                      item={item}
+                    >
+                      <button
+                        onClick={() => this.props.addEvent(item)}
+                        className="flex flex-column f5 pa2 white w1 h1 items-center justify-center bg-transparent bn absolute left-0 bottom-0"
+                      >
+                        +
+                      </button>
+                    </div>
+                  ))}
+                </section>
+                <section id="SeqRows" className="flex flex-column w-90-">
+                  {this.state.rows_.map((item, index) => (
+                    <div
+                      id="Row"
+                      key={index}
+                      className={
+                        item.type +
+                        " track slide-right- fade-in- track-row h4 w-100 flex flex-auto- flex-row bb b--black-10 relative"
+                      }
+                      item={item}
+                      style={{ width: "calc(" + zoom + "px * 60)" }}
+                    >
+                      <div
+                        className="cursor"
+                        style={{
+                          transform:
+                            "translate3d(" +
+                            this.state.ms_cursor +
+                            "px,0px,0px)"
+                        }}
+                      />
+                      {item.nodes.map((item_, index) => (
+                        // console.log(item_),
+                        <div
+                          key={index}
+                          className={
+                            this.state.activeNode === index
+                              ? " active sequence-time-node flex flex-column h-100 br b--black-20 items-start relative"
+                              : " sequence-time-node flex flex-column h-100 br b--black-20 items-start relative"
+                          }
+                          style={{ width: zoom + "px" }}
+                        >
+                          {item_.eventsData &&
+                            item_.eventsData.map(
+                              (item, index_) => (
+                                // console.log(item),
+                                index === this.state.activeNode &&
+                                item_.type === item.type
+                                  ? this.triggerEvent(item)
+                                  : null,
+                                (
+                                  <div
+                                    onClick={() => this.props.showDrawer(item)}
+                                    key={index_}
+                                    style={{
+                                      width: item.length / 1000 * zoom + "px"
+                                    }}
+                                    className="cursor-pointer sequence-event absolute flex flex-column w-100 bg-green"
+                                  />
+                                )
+                              )
+                            )}
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </section>
+              </section>
+            </section>
+          </MDBContainer>
+        </section>
+        <section
+          id="MediaElements"
+          className="flex flex-row flex-auto w-100 vh-100 bg-black-90"
+        />
+      </div>
+    );
+  }
+}
+export default Sequencer_;

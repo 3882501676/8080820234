@@ -1,0 +1,25 @@
+.drawer-inner.active {
+  transform: translate3d(0, -10vh, 0);
+}
+.drawer-inner.active > .mbox-wrapper {
+  /* transform: translate3d(0, -10vh, 0); */
+  top: 20vh;
+  position: absolute;
+}
+
+.mbox-wrapper {
+  /* transform: translate3d(0, -10vh, 0); */
+  top: 0vh;
+  position: relative;
+}
+.drawer-inner {
+  transform: translate3d(0, 0vh, 0);
+  -webkit-transform: translate3d(0, 0vh, 0);
+  -moz-transform: translate3d(0, 0vh, 0);
+  -ms-transform: translate3d(0, 0vh, 0);
+  -o-transform: translate3d(0, 0vh, 0);
+}
+
+.child-bg-white > div > div > div {
+background: white !important;
+}

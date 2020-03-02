@@ -1,0 +1,6 @@
+{
+    "folders": [{
+        "uri": "sftp://my-user:my-password@example.com?debug=1",
+        "name": "My SFTP folder"
+    }]
+}

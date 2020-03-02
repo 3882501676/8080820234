@@ -1,0 +1,16 @@
+/* FormProfile *//*# sourceMappingURL=FormBio.css.map */
+
+.bp3-dialog-header {
+    display: none !important;
+}
+.bp3-dialog {
+    background: #f9f9f9 !important;
+}
+.bp3-dialog {
+    width: 700px !important;
+    /* border-radius: 20px !important; */
+    /* -webkit-border-radius: 20px !important;
+    -moz-border-radius: 20px !important;
+    -ms-border-radius: 20px !important;
+    -o-border-radius: 20px !important; */
+}

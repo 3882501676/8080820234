@@ -1,0 +1,110 @@
+@media only screen and (min-width: 768px) {
+  #Calendar .rbc-row-content {
+    /* pointer-events: none !important; */
+  }
+  #Calendar .rbc-day-bg:hover {
+    background: grey;
+  }
+  #Calendar .rbc-day-bg {
+    cursor: pointer !important;
+  }
+  #Calendar .rbc-date-cell a {
+    font-size: 2rem !important;
+    padding: 0.6rem !important;
+    height: 24px;
+    max-height: 0;
+    font-weight: 400 !important;
+    font-family: "Roboto";
+    color: #e0e0e0 !important;
+    top: 5px !important;
+    position: relative !important;
+  }
+  #Calendar .rbc-row-segment {
+    padding: 0 10px 5px 10px !important;
+  }
+  #Calendar .rbc-month-row {
+    background: white !important;
+  }
+
+  #Calendar .rbc-addons-dnd .rbc-addons-dnd-row-body {
+    top: 2vh !important;
+  }
+  #Calendar .rbc-event {
+    border: none;
+    margin: 0px;
+    padding: 3px 20px !important;
+    border-radius: 30px !important;
+    -webkit-border-radius: 30px !important;
+    -moz-border-radius: 30px !important;
+    -ms-border-radius: 30px !important;
+    -o-border-radius: 30px !important;
+  }
+  #Calendar .rbc-header {
+    padding: 14px 1px !important;
+    font-weight: 500 !important;
+    font-size: 1.1rem !important;
+    border-bottom: 0px solid #ddd !important;
+    font-family: "Roboto" !important;
+    background: #f5f5f9 !important;
+    color: #b9b9b9 !important;
+  }
+  #Calendar .rbc-day-bg + .rbc-day-bg {
+    border-left: 1px solid #f5f5f9 !important;
+  }
+  #Calendar .rbc-header + .rbc-header {
+    border-left: 0px solid #ddd !important;
+  }
+  #Calendar .rbc-month-row + .rbc-month-row {
+    border-top: 1px solid #f5f5f9 !important;
+  }
+  #Calendar .rbc-month-view {
+    border: 0px solid #ddd !important;
+  }
+  #Calendar .rbc-month-view {
+    border: 0px solid #ddd !important;
+    border-radius: 1vw !important;
+    overflow: hidden !important;
+  }
+
+  #Calendar .rbc-toolbar {
+    margin-bottom: 6vh !important;
+  }
+  #Calendar span.rbc-toolbar-label {
+    font-size: 1.4rem !important;
+    font-family: "Roboto", sans-serif !important;
+    font-weight: 400 !important;
+    color: #9a9a9a !important;
+  }
+
+  #Calendar span.rbc-btn-group {
+    border: none;
+    box-shadow: none;
+    background: #000000;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+  .rbc-toolbar button:active,
+  .rbc-toolbar button.rbc-active {
+    /* background-image: none; */
+    /* box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); */
+    background-color: #151515 !important;
+  }
+  #Calendar span.rbc-btn-group > button {
+    border: none;
+    box-shadow: none;
+    padding: 0.6rem 2rem;
+    color: white;
+    font-weight: 400 !important;
+    font-family: "Roboto";
+  }
+  #Calendar .rbc-toolbar button:hover {
+    color: #ffffff;
+    background-color: #151515;
+    border-color: #adadad;
+    font-weight: 600 !important;
+  }
+
+  #ProfileCalendar .rbc-event {
+    padding: 0px 7px !important;
+  }
+}

@@ -1,0 +1,99 @@
+/* .media-type {
+    position: absolute;
+    right: -4px;
+    bottom: 12px;
+    background-repeat: no-repeat;
+    font-size: 0.6rem;
+    background-color: #167efc;
+    padding: 1px 5px 0px 5px;
+    color: white;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+} */
+.media-type2 {
+    position: absolute;
+    right: 4px;
+    bottom: 4px;
+    /* width: 40px; */
+    /* height: 30px; */
+    background-repeat: no-repeat;
+    font-size: 0.6rem;
+    background-color: #167efc;
+    padding: 1px 5px 0px 5px;
+    color: white;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.media-type {
+    position: absolute;
+    right: 4px;
+    bottom: 4px;
+    /* width: 40px; */
+    /* height: 30px; */
+    background-repeat: no-repeat;
+    font-size: 0.6rem;
+    background-color: #000000;
+    padding: 3px 10px 1px 10px;
+    color: white;
+    border-radius: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.avatar-media {
+  height: 170px;
+  width: 100%;
+min-width: 100px;
+}
+.media-filter:hover {
+  background: #ececec;
+}
+.media-filter {
+background: #fafafa;
+border-radius: 100px;
+padding: 0.1rem 1rem;
+margin-right: 1rem;
+color: #00000091;
+cursor: pointer;
+}
+.media-filter.active {
+  background: #c7c7c7;
+
+}
+.media-filter.active span {
+    font-weight: 600;
+    color: #fff;
+}
+
+
+.mp3 {
+  background-color: var(--c_1)
+}
+.wav {
+  background-color: var(--c_2)
+}
+.ogg {
+  background-color: var(--c_3)
+}
+.mp4 {
+  background-color: var(--c_4)
+}
+.mpg {
+  background-color: var(--c_5)
+}
+.3gp {
+  background-color: var(--c_6)
+}
+.webp {
+  background-color: var(--c_7)
+}
+.jpg {
+  background-color: var(--c_8)
+}
+.gif {
+  background-color: var(--c_9)
+}
+.jpg {
+  background-color: var(--c_1)
+}

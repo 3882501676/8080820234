@@ -1,0 +1,23 @@
+.bp3-overlay-backdrop {
+  background-color: rgba(235, 241, 245, 0.91) !important;
+}
+
+.bp3-dialog-header {
+  box-shadow: 0 1px 0px rgba(16, 22, 26, 0.04);
+  background: #ebf1f5 !important;
+}
+.bp3-dialog {
+  box-shadow: 0 5px 20px 20px rgba(16, 22, 26, 0.1),
+    0 4px 8px rgba(16, 22, 26, 0.2), 0 40px 50px 6px rgba(16, 22, 26, 0.2) !important;
+  background: #fff;
+}
+
+.bp3-spinner .bp3-spinner-head {
+  stroke-width: 2px;
+}
+.bp3-spinner .bp3-spinner-track {
+  stroke-width: 1px;
+}
+.bp3-overlay {
+  z-index: 999 !important;
+}

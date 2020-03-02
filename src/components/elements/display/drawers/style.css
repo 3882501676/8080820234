@@ -1,0 +1,14 @@
+
+.cuisines-list-item:nth-child(1), .specialties-list-item:nth-child(1) {
+    margin-left: 0 !important;
+}
+
+.cuisines-list-item, .specialties-list-item {
+    margin-left: 1rem !important;
+}
+.bs-c {
+    box-shadow: 0px 0px 10px 1px #00000057;
+}
+.bs-d {
+    box-shadow: 0px 0px 2px 1px #0000000f;
+}

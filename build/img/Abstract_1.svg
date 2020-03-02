@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1_1_" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
+<path d="M59,0H1C0.448,0,0,0.448,0,1v58c0,0.552,0.448,1,1,1h58c0.552,0,1-0.448,1-1V1C60,0.448,59.552,0,59,0z M58,28.975  C43.355,28.457,31.543,16.645,31.025,2H58V28.975z M51.322,30C40.94,32.751,32.751,40.94,30,51.322  C27.249,40.94,19.06,32.751,8.678,30C19.06,27.249,27.249,19.06,30,8.678C32.751,19.06,40.94,27.249,51.322,30z M28.975,2  C28.457,16.645,16.645,28.457,2,28.975V2H28.975z M2,31.025C16.645,31.543,28.457,43.355,28.975,58H2V31.025z M31.025,58  C31.543,43.355,43.355,31.543,58,31.025V58H31.025z"/>
+<path d="M30,23c-3.86,0-7,3.14-7,7s3.14,7,7,7s7-3.14,7-7S33.86,23,30,23z M30,35c-2.757,0-5-2.243-5-5s2.243-5,5-5s5,2.243,5,5  S32.757,35,30,35z"/>
+<circle cx="30" cy="30" r="2"/>
+
+	<metadata>
+		<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+			<rdf:Description about="https://iconscout.com/legal#licenses" dc:title="24abstract-geometric-polygon-eye" dc:description="24abstract-geometric-polygon-eye" dc:publisher="Iconscout" dc:date="2017-01-04" dc:format="image/svg+xml" dc:language="en">
+				<dc:creator>
+					<rdf:Bag>
+						<rdf:li>Becris .</rdf:li>
+					</rdf:Bag>
+				</dc:creator>
+			</rdf:Description>
+		</rdf:RDF>
+    </metadata></svg>

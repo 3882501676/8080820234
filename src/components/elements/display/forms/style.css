@@ -1,0 +1,58 @@
+.daysCount-tabs .ant-tabs-tab {
+    padding: 0rem 1rem 0.5rem 0rem !important;
+    margin: 0rem 1rem 0rem 0rem !important;
+}
+.searchResults {
+    position: absolute;
+    max-height: 200px;
+    overflow: scroll;
+    top: 60px;
+    z-index: 999;
+}
+.searchResults > div:hover {
+background-color: aqua;
+}
+.LocationProgressBar {
+    position: absolute;
+    z-index: 9999;
+    opacity: 1;
+    top: 60px;
+}
+
+.location-label-primary {
+    /* min-width: 120px; */
+}
+.formLoadingIcon {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.8rem;
+    color: gainsboro !important;
+}
+.daysCount-tabs .ant-tabs-bar {
+    padding: 0 2rem;
+}
+#LocationSearchBar input::placeholder {
+    color: #cdcdcd;
+}
+/* .ant-drawer-wrapper-body {
+    background: #ececec !important;
+} */
+.ant-checkbox-inner {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 26px;
+    height: 26px;
+    background-color: #fff;
+    border: none;
+    border-radius: 50px;
+    border-collapse: separate;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
