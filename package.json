@@ -17,7 +17,7 @@
     "framer-motion": "^1.7.0",
     "geopattern": "^1.2.3",
     "imaginiq-util": "file:src/utils/util",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "moment-range": "^4.0.2",
     "moment-timezone": "^0.5.27",
     "node-sass": "^4.13.0",
