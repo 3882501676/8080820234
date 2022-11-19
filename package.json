@@ -50,7 +50,7 @@
     "deploystaging": "aws s3 sync ./build s3://crew20-app-staging"
   },
   "devDependencies": {
-    "react-scripts": "^3.1.1"
+    "react-scripts": "^5.0.1"
   },
   "browserslist": {
     "production": [
